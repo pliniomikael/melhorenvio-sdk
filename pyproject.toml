@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "melhorenvio"
-version = "0.1.1"
+version = "0.1.2"
 description = "SDK para a API do melhorenvio"
 authors = ["Plinio Mikael <pliniomikael@gmail.com>"]
 readme = "README.md"
@@ -9,7 +9,7 @@ packages = [{include = "melhorenvio"}]
 classifiers = [
     "Intended Audience :: Developers",
     "Natural Language :: Portuguese (Brazilian)",
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Programming Language :: Python :: 3.11",
 ]
 
