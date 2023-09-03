@@ -27,71 +27,68 @@ class SDK:
     8. Checkout
     """
 
-    def __init__(self, token: str, user_config: dict, is_production: bool = False) -> None:
+    def __init__(self, user_config: dict, is_production: bool = False) -> None:
         """Construct SDK Object to have access to all APIs modules .
         [Click here for more info](https://docs.melhorenvio.com.br/reference/aplicativo-autenticacao)
         Args:
-            token (str): [description]
             user_config (dict): [description]
             is_production (bool, optional): [description]. Defaults to False.
 
 
         """
-        self.token = token
         self.is_production = is_production
         self.config = Config(
             user_config["user_agent"],
-            user_config["client_name"],
-            user_config["client_email"],
             user_config["client_id"],
             user_config["client_secret"],
             user_config["redirect_uri"],
+            user_config["code"],
         )
 
     def auth(self):
         """
         Returns the attribute value of the function
         """
-        return Auth(is_production=self.is_production, token=self.token, config=self.config)
+        return Auth(is_production=self.is_production, config=self.config)
 
     def user(self):
         """
         Returns the attribute value of the function
         """
-        return User(is_production=self.is_production, token=self.token, config=self.config)
+        return User(is_production=self.is_production, config=self.config)
 
     def store(self):
         """
         Returns the attribute value of the function
         """
-        return Store(is_production=self.is_production, token=self.token, config=self.config)
+        return Store(is_production=self.is_production, config=self.config)
 
     def company(self):
         """
         Returns the attribute value of the function
         """
-        return Company(is_production=self.is_production, token=self.token, config=self.config)
+        return Company(is_production=self.is_production, config=self.config)
 
     def quotation(self):
         """
         Returns the attribute value of the function
         """
-        return Quotation(is_production=self.is_production, token=self.token, config=self.config)
+        return Quotation(is_production=self.is_production, config=self.config)
 
     def tag(self):
         """
         Returns the attribute value of the function
         """
-        return Tag(is_production=self.is_production, token=self.token, config=self.config)
+        return Tag(is_production=self.is_production, config=self.config)
 
     def cart(self):
         """
         Returns the attribute value of the function
         """
-        return Cart(is_production=self.is_production, token=self.token, config=self.config)
+        return Cart(is_production=self.is_production, config=self.config)
 
     def checkout(self):
         """
         Returns the attribute value of the function
         """
-        return Checkout(is_production=self.is_production, token=self.token, config=self.config)
+        return Checkout(is_production=self.is_production, config=self.config)

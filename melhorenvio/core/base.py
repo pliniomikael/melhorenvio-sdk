@@ -10,15 +10,13 @@ from melhorenvio.http.http_client import HttpClient
 class MEBase:
     """All melhorenvio.resources extends this one to call the REST services."""
 
-    def __init__(self, token: str, config: Config, is_production: bool = False) -> None:
+    def __init__(self, config: Config, is_production: bool = False) -> None:
         """Initialize the object with the token and the given configuration .
 
         Args:
-            token (str): [description]
             config (Config): [description]
             is_production (bool, optional): [description]. Defaults to False.
         """
-        self.token = token
         self.config = config
         self.is_production = is_production
         self.request_options = RequestOptions()
@@ -26,10 +24,8 @@ class MEBase:
 
         if self.is_production:
             self.config.api_base_url = self.config._api_base_url_prod
-
-        self.config.api_base_url = self.config._api_base_url_dev
-        self.config.token = self.token
-        self.token = None
+        else:
+            self.config.api_base_url = self.config._api_base_url_dev
 
     def __check_headers(self, extra_headers: dict | None = None) -> dict:
         """Check headers and return a dict of headers .

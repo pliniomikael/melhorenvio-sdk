@@ -46,6 +46,6 @@ class Auth(MEBase):
             "grant_type": "refresh_token",
             "client_id": self.config.client_id,
             "client_secret": self.config.client_secret,
-            "refresh_token": self.config.refresh_token,
+            "refresh_token": self.config.token,
         }
         return self._post(uri="/oauth/token", data=payload)
