@@ -9,7 +9,11 @@ class Tag(MEBase):
 
     def create(self, body: dict) -> dict:
         """Create a tag .
-        https://docs.melhorenvio.com.br/reference/pre-visualizacao-de-etiquetas
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/pre-visualizacao-de-etiquetas).
+
+        Examples:
+            >>> sdk.tag().create(body=body)
 
         Args:
             body (dict): [description]
@@ -27,7 +31,11 @@ class Tag(MEBase):
 
     def print_tag(self, body: dict) -> dict:
         """Print a tag .
-        https://docs.melhorenvio.com.br/reference/impressao-de-etiquetas
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/impressao-de-etiquetas).
+
+        Examples:
+            >>> sdk.tag().print_tag(body=body)
 
         Args:
             body (dict): [description]
@@ -45,7 +53,11 @@ class Tag(MEBase):
 
     def preview(self, body: dict) -> dict:
         """Preview a tag data .
-        https://docs.melhorenvio.com.br/reference/pre-visualizacao-de-etiquetas
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/pre-visualizacao-de-etiquetas).
+
+        Examples:
+            >>> sdk.tag().preview(body=body)
 
         Args:
             body (dict): [description]
@@ -63,7 +75,11 @@ class Tag(MEBase):
 
     def search(self, filters: dict) -> dict:
         """Search tags .
-        https://docs.melhorenvio.com.br/reference/pesquisar-etiqueta
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/pesquisar-etiqueta).
+
+        Examples:
+            >>> sdk.tag().search(filters=filters)
 
         Args:
             filters (dict): [description]
@@ -81,7 +97,11 @@ class Tag(MEBase):
 
     def list(self, filters: dict | None) -> dict:
         """Retrieve tags .
-        https://docs.melhorenvio.com.br/reference/listar-etiquetas
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/listar-etiquetas).
+
+        Examples:
+            >>> sdk.tag().list(filters=filters)
 
         Args:
             filters (dict): [description]
@@ -99,7 +119,11 @@ class Tag(MEBase):
 
     def get(self, order_id: str) -> dict:
         """Calling the tag information  .
-        https://docs.melhorenvio.com.br/reference/listar-informacoes-de-uma-etiqueta
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/listar-informacoes-de-uma-etiqueta).
+
+        Examples:
+            >>> sdk.tag().get(order_id=order_id)
 
         Args:
             order_id (str): [description]
@@ -112,7 +136,11 @@ class Tag(MEBase):
 
     def can_cancel(self, body: dict) -> dict:
         """Check if the tag can cancel or not .
-        https://docs.melhorenvio.com.br/reference/verificar-se-etiqueta-pode-ser-cancelada
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/verificar-se-etiqueta-pode-ser-cancelada).
+
+        Examples:
+            >>> sdk.tag().can_cancel(body=body)
 
         Args:
             body (dict): [description]
@@ -130,7 +158,11 @@ class Tag(MEBase):
 
     def cancel(self, body: dict) -> dict:
         """Cancel a tag .
-        https://docs.melhorenvio.com.br/reference/cancelamento-de-etiquetas
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/cancelamento-de-etiquetas).
+
+        Examples:
+            >>> sdk.tag().cancel(body=body)
 
         Args:
             body (dict): [description]
@@ -148,7 +180,11 @@ class Tag(MEBase):
 
     def tracking(self, body: dict) -> dict:
         """The tracking a tag for the shipment .
-        https://docs.melhorenvio.com.br/reference/rastreio-de-envios
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/rastreio-de-envios).
+
+        Examples:
+            >>> sdk.tag().tracking(body=body)
 
         Args:
             body (dict): [description]

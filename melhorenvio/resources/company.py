@@ -9,7 +9,11 @@ class Company(MEBase):
 
     def all_company(self) -> dict:
         """Gets all company companys  information .
-        https://docs.melhorenvio.com.br/reference/listar-transportadoras
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/listar-transportadoras).
+
+        Examples:
+            >>> sdk.company().all_company()
 
         Returns:
             dict: [description]
@@ -18,7 +22,11 @@ class Company(MEBase):
 
     def get_company(self, company_id: str) -> dict:
         """Calling company details .
-        https://docs.melhorenvio.com.br/reference/listar-informacoes-de-uma-transportadora
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/listar-informacoes-de-uma-transportadora).
+
+        Examples:
+            >>> sdk.company().get_company(company_id=company_id)
 
         Args:
             company_id (str): [description]
@@ -31,7 +39,11 @@ class Company(MEBase):
 
     def all_services(self) -> dict:
         """Get all services .
-        https://docs.melhorenvio.com.br/reference/listar-servicos
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/listar-servicos).
+
+        Examples:
+            >>> sdk.company().all_services()
 
         Returns:
             dict: [description]
@@ -40,8 +52,12 @@ class Company(MEBase):
         return self._get(uri="/api/v2/me/shipment/services")
 
     def get_service(self, service_id: str) -> dict:
-        """Returns information about a service
-        https://docs.melhorenvio.com.br/reference/listar-informacoes-de-um-servico
+        """Returns information about a service .
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/listar-informacoes-de-um-servico).
+
+        Examples:
+            >>> sdk.company().get_service(service_id=service_id)
 
         Args:
             service_id (str): [description]
@@ -54,7 +70,12 @@ class Company(MEBase):
 
     def list_agencies(self, filters: dict | None) -> dict:
         """List all agencies .
-        https://docs.melhorenvio.com.br/reference/listar-agencias-e-opcoes-de-filtro
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/listar-agencias-e-opcoes-de-filtro).
+
+        Examples:
+            >>> sdk.company().list_agencies()
+            >>> sdk.company().list_agencies(filters=filters)
 
         Args:
             filters (dict): [description]
@@ -67,7 +88,11 @@ class Company(MEBase):
 
     def get_agency(self, agency_id: str) -> dict:
         """Returns information about a agency .
-        https://docs.melhorenvio.com.br/reference/listar-informacoes-de-uma-agencia
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/listar-informacoes-de-uma-agencia).
+
+        Examples:
+            >>> sdk.company().get_agency(agency_id=agency_id)
 
         Args:
             agency_id (str): [description]

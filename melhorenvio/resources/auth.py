@@ -9,7 +9,11 @@ class Auth(MEBase):
 
     def app_settings(self) -> dict:
         """Returns the current app settings .
-        https://docs.melhorenvio.com.br/reference/listar-informacoes-de-aplicativo
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/listar-informacoes-de-aplicativo) for this func.
+
+        Examples:
+            >>> sdk.auth().app_settings()
 
         Returns:
             dict: [description]
@@ -18,13 +22,17 @@ class Auth(MEBase):
 
     def login(self, code: str) -> dict:
         """Authenticate using the given code .
-        https://docs.melhorenvio.com.br/reference/solicitacao-do-token
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/solicitacao-do-token).
+
+        Examples:
+            >>> sdk.auth().login(code=code)
 
         Args:
             code (str): [description]
 
         Returns:
-            dict: [description]
+            (dict): [description]
         """
         payload = {
             "grant_type": "authorization_code",
@@ -37,7 +45,11 @@ class Auth(MEBase):
 
     def refresh_token(self) -> dict:
         """Refresh a refresh token .
-        https://docs.melhorenvio.com.br/reference/solicitacao-do-token
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/solicitacao-do-token).
+
+        Examples:
+            >>> sdk.auth().refresh_token()
 
         Returns:
             dict: [description]

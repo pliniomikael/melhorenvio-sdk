@@ -8,14 +8,34 @@ theme:
   language: pt-BR
   logo: assets/logo.png
   favicon: assets/logo.png
+  features:
+    - navigation.footer
   icon:
     repo: fontawesome/brands/github
+
+  palette:
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Trocar para dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Trocar para light mode
+
 
 
 markdown_extensions:
   - attr_list
   - admonition
   - pymdownx.tasklist
+  - pymdownx.highlight:
+      anchor_linenums: true
+      use_pygments: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -35,3 +55,17 @@ plugins:
       handlers:
         python:
           paths: [melhorenvio]
+          options:
+            merge_init_into_class: true
+            docstring_section_style: spacy
+            separate_signature: false
+            show_signature_annotations: true
+            members_order: source
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/pliniomikael
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/plinio-mikael-439a701a2/
+

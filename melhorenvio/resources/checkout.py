@@ -9,7 +9,11 @@ class Checkout(MEBase):
 
     def create(self, body: dict) -> dict:
         """Create a checkout of the current shipment .
-        https://docs.melhorenvio.com.br/reference/compra-de-fretes-1
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/compra-de-fretes-1).
+
+        Examples:
+            >>> sdk.checkout().create(body=body)
 
         Args:
             body (dict): [description]

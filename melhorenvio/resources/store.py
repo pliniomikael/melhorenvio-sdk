@@ -9,7 +9,11 @@ class Store(MEBase):
 
     def all(self) -> dict:
         """Fetch all store information .
-        https://docs.melhorenvio.com.br/reference/listar-lojas-do-usuario
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/listar-lojas-do-usuario).
+
+        Examples:
+            >>> sdk.store().all()
 
         Returns:
             dict: [description]
@@ -18,7 +22,11 @@ class Store(MEBase):
 
     def create(self, body: dict) -> dict:
         """Create a store .
-        https://docs.melhorenvio.com.br/reference/cadastrar-loja
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/cadastrar-loja).
+
+        Examples:
+            >>> sdk.store().create(body=body)
 
         Args:
             body (dict): [description]
@@ -36,7 +44,11 @@ class Store(MEBase):
 
     def get(self, store_id: str) -> dict:
         """Get the store information .
-        https://docs.melhorenvio.com.br/reference/visualizar-loja
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/visualizar-loja).
+
+        Examples:
+            >>> sdk.store().get(store_id=store_id)
 
         Args:
             store_id (str): [description]
@@ -48,7 +60,11 @@ class Store(MEBase):
 
     def create_address(self, store_id: str, body: dict) -> dict:
         """Create an address for the given store .
-        https://docs.melhorenvio.com.br/reference/cadastrar-endereco-de-uma-loja
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/cadastrar-endereco-de-uma-loja).
+
+        Examples:
+            >>> sdk.store().create_address(store_id=store_id, body=body)
 
         Args:
             store_id (str): [description]
@@ -66,7 +82,11 @@ class Store(MEBase):
 
     def list_address(self, store_id: str) -> dict:
         """List all addresses of a store .
-        https://docs.melhorenvio.com.br/reference/listar-enderecos-de-uma-loja
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/listar-enderecos-de-uma-loja).
+
+        Examples:
+            >>> sdk.store().list_address(store_id=store_id)
 
         Args:
             store_id (str): [description]
@@ -78,7 +98,11 @@ class Store(MEBase):
 
     def create_phone(self, store_id: str, body: dict) -> dict:
         """Create a phone for store.
-        https://docs.melhorenvio.com.br/reference/cadastrar-telefones-de-uma-loja
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/cadastrar-telefones-de-uma-loja).
+
+        Examples:
+            >>> sdk.store().create_phone(store_id=store_id, body=body)
 
         Args:
             store_id (str): [description]
@@ -96,7 +120,11 @@ class Store(MEBase):
 
     def list_phone(self, store_id: str) -> dict:
         """List all phone numbers for store.
-        https://docs.melhorenvio.com.br/reference/listar-telefones-de-uma-loja
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/listar-telefones-de-uma-loja).
+
+        Examples:
+            >>> sdk.store().list_phone(store_id=store_id)
 
         Args:
             store_id (str): [description]

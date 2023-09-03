@@ -1,11 +1,11 @@
-<img src="https://melhorenvio-sdk.readthedocs.io/pt_BR/latest/assets/logo.png" width="200">
+<img src="https://melhorenvio-sdk.readthedocs.io/pt_BR/latest/assets/logo_azul.png" width="200">
 
 # Melhor Envio SDK
 [![Documentation Status](https://readthedocs.org/projects/melhorenvio-sdk/badge/?version=latest)](https://melhorenvio-sdk.readthedocs.io/pt_BR/latest/?badge=latest)
 [![PyPI version](https://badge.fury.io/py/melhorenvio.svg)](https://badge.fury.io/py/melhorenvio)
 
 
-Melhor Envio SDK é um pacote para facilitar a integração com a API do [Melhor Envio](https://melhorenvio.com.br/)
+Melhor Envio SDK é um [pacote](https://pypi.org/project/melhorenvio/) para facilitar a integração com a API do [Melhor Envio](https://melhorenvio.com.br/)
 
 ## Instalação
 

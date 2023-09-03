@@ -9,7 +9,11 @@ class User(MEBase):
 
     def me(self) -> dict:
         """Returns the current user information .
-        https://docs.melhorenvio.com.br/reference/listar-informacoes-do-usuario
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/listar-informacoes-do-usuario).
+
+        Examples:
+            >>> sdk.user().me()
 
         Returns:
             dict: [description]
@@ -18,7 +22,11 @@ class User(MEBase):
 
     def addresses(self) -> dict:
         """List of addresses of current user account .
-        https://docs.melhorenvio.com.br/reference/listar-enderecos-do-usuario
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/listar-enderecos-do-usuario).
+
+        Examples:
+            >>> sdk.user().addresses()
 
         Returns:
             dict: [description]
@@ -27,7 +35,11 @@ class User(MEBase):
 
     def balance(self) -> dict:
         """Returns the balance of the current user .
-        https://docs.melhorenvio.com.br/reference/saldo-do-usuario
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/saldo-do-usuario).
+
+        Examples:
+            >>> sdk.user().balance()
 
         Returns:
             dict: [description]
@@ -36,7 +48,11 @@ class User(MEBase):
 
     def insert_balance(self, gateway: str, value: str) -> dict:
         """Inserts a new balance for a given gateway .
-        https://docs.melhorenvio.com.br/reference/inserir-saldo-na-carteira-do-usuario
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/inserir-saldo-na-carteira-do-usuario).
+
+        Examples:
+            >>> sdk.user().insert_balance(gateway=gateway, value=value)
 
         Args:
             gateway (str): [description]

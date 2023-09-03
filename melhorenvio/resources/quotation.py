@@ -9,7 +9,11 @@ class Quotation(MEBase):
 
     def calculate(self, body: dict) -> dict:
         """Calculate the shipment information .
-        https://docs.melhorenvio.com.br/reference/calculo-de-fretes-por-produtos
+
+        [Documentation](https://docs.melhorenvio.com.br/reference/calculo-de-fretes-por-produtos).
+
+        Examples:
+            >>> sdk.quotation().calculate(body=body)
 
         Args:
             body (dict): [description]
