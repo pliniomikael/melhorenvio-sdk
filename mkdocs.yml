@@ -8,6 +8,9 @@ theme:
   language: pt-BR
   logo: assets/logo.png
   favicon: assets/logo.png
+  icon:
+    repo: fontawesome/brands/github
+
 
 markdown_extensions:
   - attr_list
@@ -27,6 +30,7 @@ extra_css:
 
 plugins:
   - macros
+  - search
   - mkdocstrings:
       handlers:
         python:
