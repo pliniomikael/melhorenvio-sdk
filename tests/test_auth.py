@@ -3,11 +3,11 @@
 """
 import unittest
 
-import melhorenvio
+from melhorenvio.sdk import SDK
 
 
 class TestAuth(unittest.TestCase):
-    sdk = melhorenvio.SDK(
+    sdk = SDK(
         is_production=False,
         user_config={
             "user_agent": "Aplicação (email para contato técnico)",

@@ -4,13 +4,13 @@ Module: sdk
 from melhorenvio.config.config import Config
 from melhorenvio.resources import (
     Auth,
-    Cart,
-    Checkout,
+    User,
+    Store,
     Company,
     Quotation,
-    Store,
     Tag,
-    User,
+    Cart,
+    Checkout,
 )
 
 
@@ -29,7 +29,7 @@ class SDK:
 
     def __init__(self, user_config: dict, is_production: bool = False) -> None:
         """Construct SDK Object to have access to all APIs modules .
-        [Click here for more info](https://docs.melhorenvio.com.br/reference/aplicativo-autenticacao)
+        [Documentation for more info](https://docs.melhorenvio.com.br/reference/aplicativo-autenticacao)
         Args:
             user_config (dict): [description]
             is_production (bool, optional): [description]. Defaults to False.
