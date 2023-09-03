@@ -17,7 +17,10 @@ black = "^23.7.0"
 
 
 [tool.poetry.group.docs.dependencies]
-mkdocs = "^1.5.2"
+mkdocs-material = "^9.2.7"
+mkdocstrings = "^0.23.0"
+mkdocstrings-python = "^1.6.0"
+
 
 [tool.ruff]
 select = [
