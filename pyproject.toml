@@ -1,9 +1,23 @@
 [tool.poetry]
 name = "melhorenvio"
 version = "0.1.0"
-description = ""
+description = "SDK para a API do melhorenvio"
 authors = ["Plinio Mikael <pliniomikael@gmail.com>"]
 readme = "README.md"
+license = "BeerWare"
+packages = [{include = "melhorenvio"}]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Natural Language :: Portuguese (Brazilian)",
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3.11",
+]
+
+[tool.poetry.urls]
+"Documentação" = "https://melhorenvio-sdk.readthedocs.io/pt_BR/latest/"
+"Código" = "https://github.com/pliniomikael/melhorenvio-sdk"
+"Bug Tracker" = "https://github.com/pliniomikael/melhorenvio-sdk/issues"
+
 
 [tool.poetry.dependencies]
 python = "^3.11"
