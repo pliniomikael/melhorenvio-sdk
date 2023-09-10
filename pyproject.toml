@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "melhorenvio"
-version = "0.1.2"
+version = "0.1.3"
 description = "SDK para a API do melhorenvio"
 authors = ["Plinio Mikael <pliniomikael@gmail.com>"]
 readme = "README.md"
