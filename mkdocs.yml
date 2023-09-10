@@ -18,14 +18,14 @@ theme:
     # Palette toggle for light mode
     - scheme: default
       toggle:
-        icon: material/weather-night
-        name: Trocar para dark mode
+        icon: material/weather-sunny
+        name: Trocar para light mode
 
     # Palette toggle for dark mode
     - scheme: slate
       toggle:
-        icon: material/weather-sunny
-        name: Trocar para light mode
+        icon: material/weather-night
+        name: Trocar para dark mode
 
 
 
