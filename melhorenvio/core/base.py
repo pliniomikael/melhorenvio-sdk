@@ -8,14 +8,22 @@ from melhorenvio.http.http_client import HttpClient
 
 
 class MEBase:
-    """All melhorenvio.resources extends this one to call the REST services."""
+    """The base class for all Melhorenvio resources, providing a foundation for calling REST services.
+
+
+    """
 
     def __init__(self, config: Config, is_production: bool = False) -> None:
         """Initialize the object with the token and the given configuration .
 
         Args:
-            config (Config): [description]
-            is_production (bool, optional): [description]. Defaults to False.
+            config (Config): An instance of the configuration class containing API settings.
+            is_production (bool, optional): A flag indicating whether to use the production API (default is False).
+
+        Note:
+            The API base URL is determined based on the is_production flag. When is_production is True, the production
+            API base URL is used; otherwise, the development API base URL is used.
+
         """
         self.config = config
         self.is_production = is_production
@@ -28,13 +36,13 @@ class MEBase:
             self.config.api_base_url = self.config._api_base_url_dev
 
     def __check_headers(self, extra_headers: dict | None = None) -> dict:
-        """Check headers and return a dict of headers .
+        """Check and assemble the headers for an HTTP request.
 
         Args:
-            extra_headers (dict, optional): [description]. Defaults to None.
+            extra_headers (dict, optional): Additional headers to include in the request (default is None).
 
         Returns:
-            dict: [description]
+            dict: A dictionary containing the assembled HTTP headers.
         """
         headers = self.request_options.get_headers(config=self.config)
 
@@ -44,18 +52,18 @@ class MEBase:
         return headers
 
     def _get(self, uri: str, filters: dict | None = None) -> dict | ValueError:
-        """Perform a GET request .
+        """Perform a GET request to the specified URI.
 
         Args:
-            uri (str): [description]
-            filters (dict, optional): [description]. Defaults to None.
+            uri (str): The URI to send the GET request to.
+            filters (dict, optional): Query parameters to include in the request (default is None).
 
         Raises:
-            ValueError: [description]
+            ValueError: If 'filters' is provided and is not a dictionary.
 
         Returns:
-            dict: [description]
-            ValueError: [description]
+            dict: The response data if the request is successful.
+            ValueError: If the request fails or encounters an error.
         """
         if filters is not None and not isinstance(filters, dict):
             raise ValueError("Filters must be a Dictionary")
@@ -69,15 +77,15 @@ class MEBase:
         )
 
     def _post(self, uri: str, data: dict, params: str | None = None) -> dict:
-        """Perform a POST request .
+        """Perform an HTTP POST request to the specified URI.
 
         Args:
-            uri (str): [description]
-            data (dict): [description]
-            params (str, optional): [description]. Defaults to None.
+            uri (str): The URI to send the POST request to.
+            data (dict): The data to include in the POST request body.
+            params (str, optional): Query parameters to include in the request (default is None).
 
         Returns:
-            dict: [description]
+            dict: The response data if the POST request is successful.
         """
         data = JSONEncoder().encode(data)
 
@@ -90,11 +98,14 @@ class MEBase:
             maxretries=self.request_options.max_retries,
         )
 
-    def _delete(self, uri) -> dict | None:
-        """HTTP DELETE method .
+    def _delete(self, uri:str) -> dict | None:
+        """Perform an HTTP DELETE request to the specified URI.
+
+        Args:
+            uri (str): The URI to send the DELETE request to.
 
         Returns:
-            [type]: [description]
+            dict | None: The response data if the DELETE request is successful. Returns None if the operation is unsuccessful.
         """
         return self.http_client.delete(
             url=self.config.api_base_url + uri,

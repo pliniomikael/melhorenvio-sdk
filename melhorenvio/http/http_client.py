@@ -31,11 +31,7 @@ class HttpClient:
         return response
 
     def get(self, url: str, headers: dict, timeout: int, maxretries: int, params: dict | None = None) -> dict:
-        """Makes a GET request to the API
-
-        Returns:
-            dict: [description]
-        """
+        """Makes a GET request to the API"""
         return self.request(
             "GET",
             url=url,
@@ -48,11 +44,7 @@ class HttpClient:
     def post(
         self, url: str, headers: dict, timeout: int, maxretries: int, data: dict, params: dict | None = None
     ) -> dict:
-        """Makes a POST request to the API
-
-        Returns:
-            dict: [description]
-        """
+        """Makes a POST request to the API"""
         return self.request(
             "POST",
             url=url,
@@ -66,11 +58,7 @@ class HttpClient:
     def put(
         self, url: str, headers: dict, timeout: int, maxretries: int, data: dict, params: dict | None = None
     ) -> dict:
-        """Makes a PUT request to the API.
-
-        Returns:
-            dict: [description]
-        """
+        """Makes a PUT request to the API."""
         return self.request(
             "PUT",
             url=url,
@@ -82,11 +70,7 @@ class HttpClient:
         )
 
     def delete(self, url: str, headers: dict, timeout: int, maxretries: int) -> dict | None:
-        """Makes a DELETE request to the API
-
-        Returns:
-            dict: [description]
-        """
+        """Makes a DELETE request to the API."""
         return self.request(
             "DELETE",
             url=url,

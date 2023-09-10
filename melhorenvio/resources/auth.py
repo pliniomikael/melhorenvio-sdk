@@ -5,34 +5,57 @@ from melhorenvio.core.base import MEBase
 
 
 class Auth(MEBase):
-    """A factory for a Auth class ."""
+    """
+    A factory for an Auth class.
+
+    This class provides methods for authentication and managing app settings in the MelhorEnvio API.
+
+    Methods:
+        app_settings: Returns the current app settings.
+
+        login: Authenticate using the given code.
+
+        refresh_token: Refresh a refresh token.
+
+    """
+
 
     def app_settings(self) -> dict:
         """Returns the current app settings .
 
+        This method retrieves the current application settings from the MelhorEnvio API.
+
         [Documentation](https://docs.melhorenvio.com.br/reference/listar-informacoes-de-aplicativo) for this func.
 
-        Examples:
-            >>> sdk.auth().app_settings()
+        Usage:
+        ```python
+        >>> sdk.auth().app_settings()
+        ```
 
         Returns:
-            dict: [description]
+            dict: A dictionary containing application settings.
         """
         return self._get(uri="/api/v2/me/shipment/app-settings")
 
     def login(self, code: str) -> dict:
-        """Authenticate using the given code .
+        """
+        Authenticate using the given code.
+
+        This method authenticates the user by exchanging the provided code for an access token using the MelhorEnvio API.
 
         [Documentation](https://docs.melhorenvio.com.br/reference/solicitacao-do-token).
 
-        Examples:
-            >>> sdk.auth().login(code=code)
+        Usage:
+        ```python
+        >>> code = "your_auth_code"
+        >>> sdk.auth().login(code=code)
+        ```
 
         Args:
-            code (str): [description]
+            code (str): The authentication code obtained during the OAuth2 authorization process.
 
         Returns:
-            (dict): [description]
+            dict: A dictionary containing authentication information.
         """
         payload = {
             "grant_type": "authorization_code",
@@ -44,15 +67,20 @@ class Auth(MEBase):
         return self._post(uri="/oauth/token", data=payload)
 
     def refresh_token(self) -> dict:
-        """Refresh a refresh token .
+        """
+        Refresh a refresh token.
+
+        This method refreshes an expired access token using a refresh token in the MelhorEnvio API.
 
         [Documentation](https://docs.melhorenvio.com.br/reference/solicitacao-do-token).
 
-        Examples:
-            >>> sdk.auth().refresh_token()
+        Usage:
+        ```python
+        >>> sdk.auth().refresh_token()
+        ```
 
         Returns:
-            dict: [description]
+            dict: A dictionary containing refreshed token information.
         """
         payload = {
             "grant_type": "refresh_token",

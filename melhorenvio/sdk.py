@@ -32,17 +32,19 @@ class SDK:
 
         [Documentation for more info](https://docs.melhorenvio.com.br/reference/aplicativo-autenticacao).
 
-        Examples:
-            >>> sdk = SDK(
-            is_production=False,
-            user_config={
-                "user_agent": "Aplicação (email para contato técnico)",
-                "client_id": 1234,
-                "client_secret": "senha",
-                "redirect_uri": "https://localhost.com/approve/",
-                "code": "dkjahsdqoiweuqw",
-                },
-            )
+        Usage:
+        ```python
+        >>> sdk = SDK(
+        is_production=False,
+        user_config={
+            "user_agent": "Aplicação (email para contato técnico)",
+            "client_id": 1234,
+            "client_secret": "senha",
+            "redirect_uri": "https://localhost.com/approve/",
+            "code": "dkjahsdqoiweuqw",
+            },
+        )
+        ```
 
 
         Args:
@@ -63,8 +65,10 @@ class SDK:
         """
         Returns the attribute value of the function
 
-        Examples:
-            >>> sdk.auth(). # all funcs for Auth class
+        Usage:
+        ```python
+        >>> sdk.auth(). # all funcs for Auth class
+        ```
         """
         return Auth(is_production=self.is_production, config=self.config)
 
@@ -72,8 +76,10 @@ class SDK:
         """
         Returns the attribute value of the function
 
-        Examples:
-            >>> sdk.user(). # all funcs for User class
+        Usage:
+        ```python
+        >>> sdk.user(). # all funcs for User class
+        ```
         """
         return User(is_production=self.is_production, config=self.config)
 
@@ -81,8 +87,10 @@ class SDK:
         """
         Returns the attribute value of the function
 
-        Examples:
-            >>> sdk.store(). # all funcs for Store class
+        Usage:
+        ```python
+        >>> sdk.store(). # all funcs for Store class
+        ```
         """
         return Store(is_production=self.is_production, config=self.config)
 
@@ -90,8 +98,10 @@ class SDK:
         """
         Returns the attribute value of the function
 
-        Examples:
-            >>> sdk.company(). # all funcs for Company class
+        Usage:
+        ```python
+        >>> sdk.company(). # all funcs for Company class
+        ```
         """
         return Company(is_production=self.is_production, config=self.config)
 
@@ -99,8 +109,10 @@ class SDK:
         """
         Returns the attribute value of the function
 
-        Examples:
-            >>> sdk.quotation(). # all funcs for Quotation class
+        Usage:
+        ```python
+        >>> sdk.quotation(). # all funcs for Quotation class
+        ```
         """
         return Quotation(is_production=self.is_production, config=self.config)
 
@@ -108,8 +120,10 @@ class SDK:
         """
         Returns the attribute value of the function
 
-        Examples:
-            >>> sdk.tag(). # all funcs for Tag class
+        Usage:
+        ```python
+        >>> sdk.tag(). # all funcs for Tag class
+        ```
         """
         return Tag(is_production=self.is_production, config=self.config)
 
@@ -117,8 +131,10 @@ class SDK:
         """
         Returns the attribute value of the function
 
-        Examples:
-            >>> sdk.cart(). # all funcs for Cart class
+        Usage:
+        ```python
+        >>> sdk.cart(). # all funcs for Cart class
+        ```
         """
         return Cart(is_production=self.is_production, config=self.config)
 
@@ -126,7 +142,9 @@ class SDK:
         """
         Returns the attribute value of the function
 
-        Examples:
-            >>> sdk.checkout(). # all funcs for Checkout class
+        Usage:
+        ```python
+        >>> sdk.checkout(). # all funcs for Checkout class
+        ```
         """
         return Checkout(is_production=self.is_production, config=self.config)

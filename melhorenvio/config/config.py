@@ -4,8 +4,9 @@ Module: config
 
 
 class Config:
-    """
-    General infos of your SDK
+    """Configuration settings for your SDK.
+
+    This class holds the configuration settings required for your SDK to communicate with the API.
     """
 
     def __init__(
@@ -16,16 +17,14 @@ class Config:
         redirect_uri: str,
         code: str,
     ) -> None:
-        """Initialize the object to be used for the client .
+        """Initialize the configuration object for the SDK client.
 
         Args:
-            user_agent (str): [description]
-            client_id (int): [description]
-            client_secret (str): [description]
-            code (str): [description]
-            redirect_uri (str): [description]
-
-
+            user_agent (str): The user agent string to identify your SDK.
+            client_id (int): The client ID provided for your application.
+            client_secret (str): The client secret provided for your application.
+            code (str): The authorization code or access token used for API requests.
+            redirect_uri (str): The redirect URI used for authentication.
         """
         self.user_agent = user_agent
         self.client_id = client_id
