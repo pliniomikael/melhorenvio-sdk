@@ -82,12 +82,12 @@ class User(MEBase):
         >>> sdk.user().insert_balance(gateway=gateway, value=value)
         ```
 
-		Args:
-			gateway (str): The gateway for which you want to insert the balance.
-			value (str): The value of the balance to be inserted.
+        Args:
+            gateway (str): The gateway for which you want to insert the balance.
+            value (str): The value of the balance to be inserted.
 
-		Returns:
-			dict: A dictionary containing information about the inserted balance.
+        Returns:
+            dict: A dictionary containing information about the inserted balance.
 		"""
         return self._post(
             uri="/api/v2/me/balance",
